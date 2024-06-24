@@ -1,0 +1,12 @@
+rly checks if it can only be accessed by wheel group and sets caller's uid to 0.
+
+rly replaces the most common reason for using sudo, while at the same time being
+much simpler, reducing the general security risk to the system. unlike sudo, rly
+doesn't pretend that the caller's account is any more secure than root, so there
+is never a need for a password. rly only escalates to root, if you want to allow
+user to run commands as though they were another non-root user you can use doas.
+
+rly is based on chiark-really, made by Ian Jackson <ian@chiark.greenend.org.uk>.
+
+rly is free software: you are free to change and redistribute it under the terms
+of the GNU GPL version 3 or any later version; see the COPYING file for details.
