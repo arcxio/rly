@@ -57,7 +57,7 @@ int main(int argc, const char *const *argv) {
   if (r) { fputs("getuid mismatch",stderr); exit(-1); }
   r= geteuid(); if (r<0) { perror("geteuid failed"); exit(-1); }
   if (r) { fputs("geteuid mismatch",stderr); exit(-1); }
-  execvp(argv[0],(char**)argv);
+  execve(argv[0],(char**)argv);
   perror("exec failed");
   exit(-1);
 }
