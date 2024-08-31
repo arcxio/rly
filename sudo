@@ -1,0 +1,4 @@
+#!/bin/sh
+printf "really '%s'? [y/N]: " "$*"
+read -r answer
+case $answer in [yY]) rly "$@" ;; esac
